@@ -16,9 +16,9 @@ After running the above if the problem presented a `configuration-cache` directo
 
     $ ls ./src/test/resources/test-build/ -la
     total 12
-    drwxr-xr-x 2 nikc hd 4096 Aug 19 17:16 .
-    drwxr-xr-x 3 nikc hd 4096 Aug 19 15:46 ..
-    -rw-r--r-- 1 nikc hd  100 Aug 19 17:16 build.gradle
-    -rw-r--r-- 1 nikc hd   31 Aug 19 15:46 settings.gradle
+    drwxr-xr-x 2 user group 4096 Aug 19 17:16 .
+    drwxr-xr-x 3 user group 4096 Aug 19 15:46 ..
+    -rw-r--r-- 1 user group  100 Aug 19 17:16 build.gradle
+    -rw-r--r-- 1 user group   31 Aug 19 15:46 settings.gradle
 
 ... that directory does not exist.
