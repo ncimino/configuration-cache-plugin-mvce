@@ -52,6 +52,6 @@ class GreetingTest extends Specification {
                 .build()
 
         then:
-        result.task("hello").outcome == TaskOutcome.SUCCESS
+        result.task(":hello").outcome == TaskOutcome.SUCCESS
     }
 }
