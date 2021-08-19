@@ -1,0 +1,8 @@
+plugins {
+    id 'com.company.greeting'
+}
+
+greeting {
+    message = 'Hello'
+    greeter = 'Gradle'
+}

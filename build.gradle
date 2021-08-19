@@ -1,0 +1,33 @@
+plugins {
+    id 'groovy'
+    id 'java-gradle-plugin'
+}
+
+group 'com.company'
+version '1.0.0'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+gradlePlugin {
+    plugins {
+        greeting {
+            id = 'com.company.greeting'
+            implementationClass = 'com.company.greeting.GreetingPlugin'
+        }
+    }
+}
+
+dependencies {
+    implementation gradleApi()
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.8'
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
