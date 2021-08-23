@@ -1,18 +1,21 @@
 # Configuration Cache is Empty with a Plugin MVCE
 
-While creating and running Gradle plugin projects using 7.+ we are seeing .configuration-cache directories created with a single empty file.
+While creating and running Gradle plugin projects using 7.+ we are seeing `.gradle/configuration-cache/gc.properties`
+created which is an empty file.
 
 This project is an attempt to reproduce that behavior, but it currently does not reproduce.
 
-Something must be different between our projects where we observe this and this project. We are working to isolate the issue and this has been published in case we need to collaborate on it more to reproduce.
+Something must be different between our projects where we observe this and this project. We are working to isolate the 
+issue and this has been published in case we need to collaborate on it more to reproduce.
 
 # To Reproduce
 
-It is expected that the following would reproduce:
+The following should reproduce, but it doesn't:
 
     ./gradlew test
 
-After running the above if the problem presented a `configuration-cache` directory would exist; However, when the following is run:
+When the problem manifests itself a `.gradle/configuration-cache/gc.properties` file is created in the PWD; However, 
+after running the test flow for this project the PWD where the test-kit launched the run does not contain this folder:
 
     $ ls ./src/test/resources/test-build/ -la
     total 12
